@@ -80,6 +80,7 @@ glob finding old rotated logs failed
 renaming /var/log/v2ray/error.log to /home/v2ray-log/error.log-20191121
 creating new /var/log/v2ray/error.log mode = 0644 uid = 0 gid = 0
 ```
+## (可选)4.手动执行
 可以手动执行-f的force，适当打出细节-v
 ```
 logrotate -vf /etc/logrotate.d/v2ray
