@@ -7,4 +7,3 @@ centos自带的日志切割工具logrotate,方便机器每天分割累计的日�
 /etc/logrotate.config        主文件配置一般不用动
 /var/lib/logrotate/status   记录上次转存的时间
 ```
-```
