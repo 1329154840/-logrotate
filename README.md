@@ -64,9 +64,21 @@ Handling 1 logs
 rotating pattern: /var/log/v2ray/access.log /var/log/v2ray/error.log  after 1 days (10 rotations)
 olddir is /home/v2ray-log, empty log files are rotated, old logs are removed
 considering log /var/log/v2ray/access.log
-  log does not need rotating (log has been rotated at 2018-10-20 22:30, that is not day ago yet)
+  log needs rotating
 considering log /var/log/v2ray/error.log
-  log /var/log/v2ray/error.log does not exist -- skipping
+  log needs rotating
+rotating log /var/log/v2ray/access.log, log->rotateCount is 10
+dateext suffix '-20191121'
+glob pattern '-[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+glob finding old rotated logs failed
+renaming /var/log/v2ray/access.log to /home/v2ray-log/access.log-20191121
+creating new /var/log/v2ray/access.log mode = 0644 uid = 0 gid = 0
+rotating log /var/log/v2ray/error.log, log->rotateCount is 10
+dateext suffix '-20191121'
+glob pattern '-[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+glob finding old rotated logs failed
+renaming /var/log/v2ray/error.log to /home/v2ray-log/error.log-20191121
+creating new /var/log/v2ray/error.log mode = 0644 uid = 0 gid = 0
 ```
 可以手动执行-f的force，适当打出细节-v
 ```
