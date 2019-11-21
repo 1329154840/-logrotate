@@ -18,6 +18,7 @@ example 配置完保存在/etc/logrotate.d/下，若文件名假设为v2ray，�
  	olddir /home/v2ray-log
  	missingok
  	nocompress
+	dateext
  	create 644 root root
 }
 ```
@@ -25,6 +26,7 @@ example 配置完保存在/etc/logrotate.d/下，若文件名假设为v2ray，�
 ```
 compress             通过gzip 压缩转储以后的日志
 nocompress           不需要压缩时，用这个参数
+dateext              为日志文件打上日期标签
 copytruncate         用于还在打开中的日志文件，把当前日志备份并截断
 nocopytruncate       备份日志文件但是不截断
 create mode owner group 转储文件，使用指定的文件模式创建新的日志文件
@@ -70,6 +72,3 @@ considering log /var/log/v2ray/error.log
 ```
 logrotate -vf /etc/logrotate.d/v2ray
 ```
-
-
-
